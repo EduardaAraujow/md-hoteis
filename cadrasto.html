@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Madu Hospedagens</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header id="detalhes">
+			 <img src="favicon.ico" alt="logo">
+			<h1>MD Hospedagens</h1>
+			<hr>
+	</header>
+	<section>
+		<ul>
+            <li>
+                <a href="index.html">Início</a>
+            </li>
+            <li>
+               <a href="cadrasto.html">Cadastro</a>
+                    <ul>
+                        <li>
+                            <a href="login.html">login</a>
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                <a href="autor.html">Autor</a>
+            </li>
+        </ul>
+	</section>
+
+	<div>
+		<h2>Cadastro</h2>
+		<hr>
+		<form>
+			<label for="email_da_pessoa">Digite seu email: </label>
+			<input type="email" name="email_da_pessoa" id="email_da_pessoa" minlength="2"placeholder="SeuNome@gmail.com">
+			<br>
+			<label for="senha_da_pessoa">Digite sua senha: </label>
+			<input type="password" name="senha_da-pessoa" id="senha_da_pessoa" placeholder="123****">
+			<br>
+			<label for="senha_da_pessoa">Confirme sua senha: </label>
+			<input type="password" name="senha_da-pessoa" id="senha_da_pessoa" placeholder="123****">
+			<br>
+			<label for="cidade_da_pessoa">Digite sua Cidade: </label>
+			<input type="cidade" name="cidade_da_pessoa" id="cidade_da_pessoa" minlength="2"placeholder="Maranguape">
+			<br>
+				<label>Data:
+				<input name="number" type="date" />
+                </label>
+			</div>
+			<label>sexo:
+				<select name="nome">
+					<option>feminino</option>
+					<option>Masculino</option>
+				</select>
+			</label>
+			<br>
+			<input type="submit" value ="Entrar">
+			<br>
+			<input type="reset" value = "Sair">
+			<br>
+			<br>
+		</form>
+		<article>
+			<h2>Cadrastros Recentes:</h2>
+			<hr>
+			<table border='1'>
+			   <tr>
+				   <td>ElaineArajo@gmail.com</td>
+				   <td>Maranguape  .</td>
+				   <td> 5 estrelas  ,</td>
+			   </tr>
+			   <tr>
+				   <td>FranciscaArajo@gmail.com</td>
+				   <td> marapinga .</td>
+				   <td>5 estrelas  .</td>
+			   </tr>
+			   <tr>
+				   <td>EduardaArajo@gmail.com</td>
+				   <td>Beira Mar .</td>
+				   <td> 5 estrelas .</td>
+			   </tr>
+		   </table>
+		</article>
+	</div>
+	<hr>
+	<br>
+    <footer>
+        <a href="autor.html">Desenvolvido por: Eduarda Araujo</a>
+    </footer>
+
+</body>
+</html>

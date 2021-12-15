@@ -1,0 +1,364 @@
+
+:root {
+  --cor1: #55f9ff;
+  --cor2: #4aa6d4;
+  --corterciaria: #31f589;
+  --cor2leve: #b6e2f8;
+}
+#drkmd {
+  padding: 9px 16px;
+  text-align: center;
+  float: right;
+}
+
+header {
+  font-family: 'Signika', sans-serif; ;
+  font-size: 30px;
+  background-color: var(--cor1);
+  padding: 4px;
+  display:flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0px;
+  background-color: #e3fcff;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+nav {
+  font-family: 'Rubik', sans-serif;
+  top: 0;
+  position: sticky;
+  z-index: 10;
+}
+
+.btmenu, .btfechar, #menu{
+  display: none;
+  background-color: var(--cor2);
+  width: 30px;
+  border-radius: 50%;
+  text-align: center;
+  border: solid 3px var(--corp1);
+}
+
+@media screen and (max-width: 600px) {
+  nav{
+    display: none;
+  }
+  
+  input:checked ~ nav {
+    display: block;
+  }
+  input:checked ~ .btmenu {
+    display: none;
+  }
+  input:checked ~ .btfechar {
+    display: block;
+  }
+  .btmenu {
+    display: block;
+  }
+
+}
+
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--cor2);
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+li a, .drop {
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .menusecundario:hover .drop {
+  background-color: var(--corterciaria);
+  transition-duration: 0.3s;
+  color: black;
+  cursor: pointer;
+}
+
+li.menusecundario {
+  display: inline-block;
+}
+
+.dropcontent {
+  display: none;
+  position: absolute;
+  background-color: var(--cor2);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropcontent ul{
+  color: var(--comterciaria2);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropcontent a:hover {
+  background-color: var(--comterciaria2);
+  transition-duration: 0.3s;
+  cursor: pointer;
+  color: whitesmoke
+}
+
+.menusecundario:hover .dropcontent {
+  display: block;
+}
+
+.hoteis {
+  width: 19%;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  place-items: center;
+  min-width: 280px;
+  justify-content: space-between;
+}
+
+main section {
+  font-family: 'Averia Serif Libre', cursive; 
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  main section {
+    justify-content: space-around;
+  }
+}
+
+@media print {
+  nav {
+    display: none;
+  }
+  li a {
+   display: none;
+ }
+ .livro {
+   width: none;
+ }
+}
+
+.titulosecao {
+  font-family:'Averia Serif Libre', cursive; 
+  width: 100%;
+  padding: 1em;
+  background-color: var(--cor1);
+  margin-top: 2em;
+  border: solid 3px var(--corterciaria);
+  font-size: 50px;
+}
+
+#primeirotitulo {
+  margin-top: 0;
+}
+
+p {
+  font-family: 'Rubik', sans-serif;;
+}
+
+
+main a {
+  font-family: 'Rubik', sans-serif;
+  text-decoration: none;
+  background-color: var(--cor2);
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  display: inline-block;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+main a:hover, input[type=submit]:hover {
+  background-color: var(--corterciaria);
+  color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+label {
+  text-align: left;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=date], input[type=number], select {
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+  outline: none;
+}
+
+input[type=radio], input[type=checkbox] {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin-top: 2px;
+  text-align: left;
+}
+
+.checkbox {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.radio {
+  font-size: 20px;
+  padding: 5px;
+}
+
+.labelradio {
+  margin-bottom: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=date]:focus, input[type=number]:focus, select:focus, input[type=checkbox]:hover {
+  border: 2px solid var(--cor2);
+  background-color:var(--cor2leve);
+}
+
+button[type=submit], button[type=button] {
+  display: flex;
+  cursor: pointer;
+  border: none;
+  padding: 1em;
+  margin-top: 20px;
+  background-color: var(--cor);
+  color: white;
+  transition-duration: 0.5s;
+}
+
+button[type=submit]:hover, button[type=button]:hover {
+  background-color: var(--corterciaria);
+  color: black;
+
+} 
+
+.paiform {
+  display: block;
+  text-align: center;
+}
+
+
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--corsecundaria);
+}
+
+form a {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.linknormal {
+  padding: 0;
+  text-decoration: underline;
+  color: blue;
+  background-color: transparent;
+  text-align: left;
+  transition-duration: 99999999s;
+}
+
+table {
+  margin: auto;
+}
+
+
+td, th {
+  text-align: center;
+  border-collapse: collapse;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  height: 1em;
+}
+
+th {
+  background-color: #0071A8;
+  color: white;
+}
+
+tr:nth-child(even) {background-color: var(--cor2leve);}
+
+table a {
+  background-color:transparent;
+  color: black;
+  border: 2px solid var(--cor2) ;
+}
+
+.capa {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+.quadro {
+  justify-content: space-around;
+  display: flex;
+}
+
+
+footer {
+  font-family:'Rubik', sans-serif; 
+  font-style: oblique;
+  margin-top: 60px;
+  background-color:var(--cor1) ;
+  transition-duration: 0.6s;
+}
+
+footer:hover {
+  background-color:var(--corterciaria) ;
+}
+
+footer a {
+  text-decoration: none;
+  color:black;
+  display: block;
+  text-align: center;
+  padding: 2em;
+}
+
+main {
+  display: block;
+  font-family: 'Rubik', sans-serif;;
+}
